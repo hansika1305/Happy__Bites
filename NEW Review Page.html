@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Customers Say - Foodie Paradise</title>
+    
+    <style>
+        /* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: grey;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+header nav {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Section */
+main {
+    padding: 2rem 0;
+}
+
+/* Reviews Section */
+#reviews {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.review {
+    background-color: rgb(240, 175, 150);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.reviewer-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.star-rating {
+    display: flex;
+}
+
+.star {
+    font-size: 1.5rem;
+    color: yellow;
+    cursor: pointer;
+}
+
+.star-rating .star.inactive {
+    color: lightgray;
+}
+
+.review-text {
+    font-size: 1rem;
+    color: black;
+}
+
+/* Leave Review Section */
+#leave-review {
+    background-color: rgb(240, 175, 150);
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#leave-review form {
+    display: flex;
+    flex-direction: column;
+}
+
+#leave-review label {
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+#leave-review input, #leave-review textarea {
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#leave-review button {
+    margin-top: 1rem;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#leave-review button:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Happy Bites</h1>
+            
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <div class="container">
+            <!-- Customer Reviews Section -->
+            <section id="reviews">
+                <h2>What Our Customers Are Saying</h2>
+
+                <!-- Review 1 -->
+                <div class="review">
+                    <div class="review-header">
+                        <span class="reviewer-name">Prabhjot Singh</span>
+                        <div class="star-rating">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9734;</span>
+                        </div>
+                    </div>
+                    <p class="review-text">"The pasta here is absolutely amazing! Fresh ingredients and perfect flavors. Highly recommended!"</p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review">
+                    <div class="review-header">
+                        <span class="reviewer-name">Ashwini Kumar</span>
+                        <div class="star-rating">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                        </div>
+                    </div>
+                    <p class="review-text">"Best burger in town! The patty is juicy and flavorful. Will definitely be coming back!"</p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review">
+                    <div class="review-header">
+                        <span class="reviewer-name">Arjun Puri</span>
+                        <div class="star-rating">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                        </div>
+                    </div>
+                    <p class="review-text">"The food delievery is very fast, but I found the dessert a bit too sweet for my taste. Overall, a good experience."</p>
+                </div>
+
+                <!-- More reviews can be added here -->
+
+            </section>
+
+            <!-- Submit a Review Section -->
+            <section id="leave-review">
+                <h2>Leave a Review</h2>
+                <form id="review-form">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="rating">Rating:</label>
+                    <div class="rating">
+                        <span class="star" onclick="setRating(1)">&#9733;</span>
+                        <span class="star" onclick="setRating(2)">&#9733;</span>
+                        <span class="star" onclick="setRating(3)">&#9733;</span>
+                        <span class="star" onclick="setRating(4)">&#9733;</span>
+                        <span class="star" onclick="setRating(5)">&#9733;</span>
+                    </div>
+                    <input type="hidden" id="star-rating" name="rating" required>
+
+                    <label for="review">Your Review:</label>
+                    <textarea id="review" name="review" rows="4" required></textarea>
+
+                    <button type="submit">Submit Review</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+
+    <script>
+    // JavaScript for star rating and form submission
+    let currentRating = 0;
+
+    // Function to set the rating when a star is clicked
+    function setRating(rating) {
+        currentRating = rating;
+        const stars = document.querySelectorAll('.star');
+        stars.forEach((star, index) => {
+            if (index < rating) {
+                star.classList.remove('inactive');
+            } else {
+                star.classList.add('inactive');
+            }
+        });
+        document.getElementById('star-rating').value = rating;
+    }
+
+    // Form submission logic
+    document.getElementById('review-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const reviewText = document.getElementById('review').value;
+        const rating = currentRating;
+
+        if (name && reviewText && rating) {
+            // You can add your code to dynamically create a new review element here
+            
+            // For now, show an alert
+            alert("Please give us a review by filling all the details!.");
+            
+            // Optionally, clear the form after submission
+            document.getElementById('review-form').reset();
+            setRating(0);  // Reset the rating stars
+        } else {
+            alert("Thank you for your review! Your feedback has been submitted.");
+        }
+    });
+
+    </script>
+
+</body>
+</html>
