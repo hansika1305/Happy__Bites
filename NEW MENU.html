@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+     
+  }
+  body, html {
+      height: 1%;
+      margin: 0;
+      
+  }
+  body{
+      background-image: url("https://www.shutterstock.com/image-photo/healthy-meal-diet-plan-daily-260nw-1756843007.jpg");
+      background-size: cover;
+      background-position: center; 
+      /* background-repeat: no-repeat; */
+  
+  }
+  header .logo{
+    font-size: 35px;
+    font-weight: bold;
+    color: #fff;
+  }
+  header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+  }
+
+  
+  header nav ul {
+      list-style: none;
+      display: flex;
+  }
+  
+  header nav ul li {
+      margin-left: 35px;
+  }
+  
+  header nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+
+      
+  }
+  pre{
+    margin-right: 20px;
+  }
+  
+  header nav ul li a:hover {
+    color: yellow;
+  }
+  
+  .menu-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 10px;
+      padding: 25px;
+  }
+    
+  .food-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+    
+  .food-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+    
+  .food-item h3 {
+    color:black;
+    font-size: 24px;
+    margin: 10px 0;
+  }
+    
+  .food-item p {
+    color:black;
+    font-size: 15px;
+    margin: 5px 0;
+  }
+    
+  .food-item .price {
+    font-weight: bold;
+    font-size: 20px;
+    color: #ff4757;
+    margin-top: 10px;
+  }
+  
+  .order-btn{
+    background-color: orange;
+    border-color:  orange;
+    padding: 7px 20px;
+    border-radius: 5px;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+  }
+  .order-btn:hover{
+    background-color: red;
+    transform: translate3d(3px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  
+  }
+  .food-item img{
+    width:200px;
+    height:200px;
+  }
+  .food-item img:hover{
+    transition: 1.2s;
+    transform: scale(1.1);
+    z-index: 2;
+  }
+        *{
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        color: white;
+    }
+    footer{
+        background: #343434;
+        padding-top: 50px;
+    }
+    .footer{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+    .footer-content{
+        width: 33.3%;
+    }
+    h3{
+        font-size: 28px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .footer-content p{
+        width:190px;
+        margin: auto;
+        padding: 7px;
+    }
+    .footer-content ul{
+        text-align: center;
+    }
+    .list{
+        padding: 0;
+    }
+    .list li{
+        width: auto;
+        text-align: center;
+        list-style-type:none;
+        padding: 7px;
+        position: relative;
+    }
+    .list li::before{
+        content: '';
+        position: absolute;
+        transform: translate(-50%,-50%);
+        left: 50%;
+        top: 100%;
+        width: 0;
+        height: 2px;
+        background: #f18930;
+        transition-duration: .5s;
+    }
+    .list li:hover::before{
+        width: 70px;
+    }
+    .social-icons{
+        text-align: center;
+        padding: 0;
+    }
+    .social-icons li{
+        display: inline-block;
+        text-align: center;
+        padding: 5px;
+    }
+    .social-icons i{
+        color: white;
+        font-size: 25px;
+    }
+    a{
+        text-decoration: none;
+    }
+    a:hover{
+        color: #f18930;
+    }
+    .social-icons i:hover{
+        color: #f18930;
+    }
+    .bottom-bar{
+        background: #f18930;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 50px;
+    }
+    .bottom-bar p{
+        color: #343434;
+        margin: 0;
+        font-size: 16px;
+        padding: 7px;
+    }
+            
+            
+        
+
+  </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">HAPPY BITES</div>
+            <img src="https://f2494adb49243be9a636.cdn6.editmysite.com/uploads/b/f2494adb49243be9a6364462de871d63c06bc3a9bd7a74cfc81bba40db837efb/HB%20logo_1707050456.JPG?width=2400&optimize=medium" style="width:100px;height:100px;padding-left:0px;border-radius:80%;">
+            <ul>
+                <li><a href="NEW HOME PAGE.html">Home</a></li>
+                <!-- <li><a href="userprofile.html">User Profile</a></li> -->
+                <li><a href="NEW ABOUT US.html">About Us</a></li>
+                <li><a href="NEW CONTACT US.html">Contact Us</a></li>
+                <li><a href="NEW Review Page.html">Review Page</a></li>
+                <li><a href="NEW CLASSIFICATION.html">Categories of Food items</a></li>
+                <li><a href="#" id="offersButton"><pre>&#128722Cart</pre></a></li>
+            </ul>
+        </nav>
+        
+       
+        
+         
+          
+        
+      </div>
+      
+        
+    </header>
+    
+        
+        <div class="menu-container">
+            <div class="food-item">
+                <img src="https://img.freepik.com/premium-photo/free-photo-freshly-italian-chicken-burgar-with-mozzarella-cheese-slice-generative-ai_746565-83599.jpg" alt="Burger">
+                <h3>Burger</h3>
+                <p>Juicy beef burger with lettuce and tomato.</p>
+                <p class="price">₹149</p>
+                <button class="order-btn">- 1 +</button>
+            </div>
+            <div class="food-item">
+                <img src="https://img.freepik.com/premium-photo/basket-french-fries-with-crispy-coating_762785-339086.jpg" alt="French Fries">
+                <h3>Classic French Fries</h3>
+                  <p>Crispy golden fries, served with ketchup</p>
+                  <p class="price">₹119</p>
+                  <button class="order-btn">- 1 +</button>
+              </div>
+              
+              <div class="food-item">
+                <img src="https://www.papillesetpupilles.fr/opengraph_image/117813" alt="Hot Dog">
+                <h3>Hot Dog</h3>
+                  <p>Freshly prepared hot dog, filled with crispy vegetable sticks and exotic vegetables</p>
+                  <p class="price">₹129</p>
+                  <button class="order-btn">- 1 +</button>
+              </div>
+              <div class="food-item">
+                <img src="https://admin.bagsy.in/storage/32050/60043279.cms" alt="Grilled Sandwich">
+                <h3>Grilled Sandwich</h3>
+                <p>A delicious grilled sandwich filled with fresh vegetables and melted cheese</p>
+                <p class="price">₹149</p>
+                <button class="order-btn">- 1 +</button>
+            </div>
+            <div class="food-item">
+                <img src="https://content.jdmagicbox.com/comp/def_content/pizza_outlets/default-pizza-outlets-13.jpg" alt="Pizza">
+                <h3>Pizza</h3>
+                <p>Delicious cheese pizza with fresh toppings.</p>
+                <p class="price">₹219</p>
+                <button class="order-btn">- 1 +</button>
+            </div>
+        <div class="food-item">
+        <img src="https://i.ytimg.com/vi/OcFlqNZyrJ4/maxresdefault.jpg" alt="White Sauce Pasta">
+        <h3>White Sauce Pasta</h3>
+        <p>Italian white Sauce pasta with creamy sauce.</p>
+        <p class="price">₹199</p>
+        <button class="order-btn">- 1 +</button>
+    </div>
+    
+  <div class="food-item">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROGTkQO8jD74LXTcnrOS3deAVfgoMjOry-Iw&s" alt="Garlic Bread">
+    <h3>Garlic Bread</h3>
+      <p>Freshly baked breadsticks topped with garlic butter and herbs.</p>
+      <p class="price">₹159</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://hips.hearstapps.com/hmg-prod/images/classic-salad-recipes-1650918682.jpeg" alt="Salad">
+    <h3>Salad</h3>
+      <p>Freshly served veggies with tempting and yummy dressing.</p>
+      <p class="price">₹169</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F43%2F2022%2F03%2F19%2F238691-Simple-Macaroni-And-Cheese-mfs_006.jpg&w=160&q=60&c=sc&poi=auto&orient=true&h=90" alt="Mac and Cheese">
+    <h3>Mac and Cheese</h3>
+      <p>Italian creamy and cheesy Macroni.</p>
+      <p class="price">₹249</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+  <div class="food-item">
+    <img src="https://recipesblob.oetker.in/assets/b72049329c8742b98daf790c9ef937bd/1272x764/loaded-nachos.jpg" alt="Nachos">
+    <h3>Nachos</h3>
+      <p>Crispy and Crunchy Nachos served with mexican dip</p>
+      <p class="price">₹159</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+  <div class="food-item">
+    <img src="https://brandsitesplatform-res.cloudinary.com/image/fetch/w_1540,c_scale,q_auto:eco,f_auto,fl_lossy,dpr_1.0,e_sharpen:85/https://assets.brandplatform.generalmills.com%2F-%2Fmedia%2Fproject%2Fgmi%2Foldelpaso%2Foldelpaso-us%2Frecipes%2Fqtcu578og0gukdk_kb_rmg_gmi_hi_res_jpeg.jpeg%3F%201540w" alt="Taco">
+    <h3>Taco</h3>
+      <p>Crispy taco filled with spiced paneer and fresh vegetables</p>
+      <p class="price">₹149</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+  <div class="food-item">
+    <img src="https://i0.wp.com/sonoratortillas.ca/wp-content/uploads/2022/12/image-13.jpeg?fit=2120%2C1414&ssl=1" alt="Burritos">
+    <h3>Burritos</h3>
+      <p>Soft burritos filled with spiced and creamy rajma and with vegetables</p>
+      <p class="price">₹199</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+  <div class="food-item">
+    <img src="https://www.cookwithnabeela.com/wp-content/uploads/2024/02/ChickenWrap.webp" alt="Wraps">
+    <h3>Wraps</h3>
+      <p>Crispy covering filled with spiced paneer and fresh vegetables</p>
+      <p class="price">₹189</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpDz4-GZI5EPxY_2Q-d_HnCANSJ42Cf6EFWg&s" alt="Noodles">
+    <h3>Noodles</h3>
+      <p>Hot and sizzling noodles with loads of vegetables and spice.</p>
+      <p class="price">₹199</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://redhousespice.com/wp-content/uploads/2021/12/whole-spring-rolls-and-halved-ones-scaled.jpg" alt="Springroll">
+    <h3>Springroll</h3>
+      <p>Crispy fried Springrolls served with sweet chilli sauce.</p>
+      <p class="price">₹169</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://parcelkaro.in/wp-content/uploads/2023/01/Cheese-Corn-Roll.jpg" alt="Cheese Corn Rolls">
+    <h3>Cheese Corn Rolls</h3>
+      <p>Crispy fried cheese corn rolls served with marinara sauce.</p>
+      <p class="price">₹209</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://www.sanjanafeasts.co.uk/wp-content/uploads/2020/04/IMG_1746.jpg" alt="Munchurian">
+    <h3>Manchurian</h3>
+      <p>Soft and stuffed manchurian balls with spiced gravy.</p>
+      <p class="price">₹249</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeNJVW8TceaTMG3heNmii66Fs6pQ7Veltqfw&s" alt="Cheese Chilli">
+    <h3>Cheese Chilli</h3>
+      <p>Spicy and tangy Cheese Chilli made with melted cheese and bell peppers.</p>
+      <p class="price">₹259</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaMt9CNGc-6gE4ooTm2rDS0E17ett0nwjm3Q&s" alt="Dosa">
+    <h3>Dosa</h3>
+      <p>Fluffy,crispy and packed with flavour-our Dosa is the ultimate comfort food.</p>
+      <p class="price">₹299</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://artofpalate.com/wp-content/uploads/2016/08/idli-with-rice-flour.jpg" alt="Idli">
+    <h3>Idli</h3>
+      <p>Idli served with south indian chutney.</p>
+      <p class="price">₹199</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://www.cookingcarnival.com/wp-content/uploads/2022/02/Uttapam-1.webp" alt="Uttapam">
+    <h3>Uttapam</h3>
+      <p>Uttapam served with south indian chutney.</p>
+      <p class="price">₹119</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://bonmasala.com/wp-content/uploads/2022/12/medu-vada-recipe.webp" alt="Vada">
+    <h3>Vada</h3>
+      <p>vada served with south indian chutney.</p>
+      <p class="price">₹109</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC5lz2Ykj3xkB32_xZR2sprTXPD4hhi0462Q&s" alt="Kadai Paneer">
+    <h3>Kadai-Paneer</h3>
+      <p>Kadai Paneer:Where bold flavours meet creamy goodness!</p>
+      <p class="price">₹329</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnLVoctTI8JoT68ssjiInOCd5K7UHseYIRzw&s" alt="Paneer Butter Masala">
+    <h3>Paneer Butter Masala</h3>
+      <p>A velvety delight-Taste the magic of Paneer Butter Masala</p>
+      <p class="price">₹349</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://purendesi.in/wp-content/uploads/2024/03/shahi-paneer-recipe.jpg" alt="Shahi Paneer">
+    <h3>Shahi Paneer</h3>
+      <p>The ultimate treat for Paneer lovers.</p>
+      <p class="price">₹359</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://www.funfoodfrolic.com/wp-content/uploads/2023/04/Dal-Makhani-Blog-500x500.jpg" alt="Dal Makhani">
+    <h3>Dal Makhani</h3>
+    <p>Dal Makhani-"A true punjabi classic"</p>
+    <p class="price">₹249</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsT8TUD-NzEQeESGXCTvbEFMbcMp-heDW-Kw&s" alt="Malai Kofta">
+    <h3>Malai Kofta</h3>
+      <p>"Soft Koftas,Rich Gravy:Pure Bliss"</p> 
+      <p class="price">₹279</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://sharan-india.org/wp-content/uploads/1-Pooja-hanabaratti-Navratan-korma2.png" alt="Navratan Korma">
+    <h3>Navratan Korma</h3>
+       <p>A delightful mix of Veggies,Spices and Cream.</p> 
+      <p class="price">₹299</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://www.indianrecipeinfo.com/wp-content/uploads/2011/12/Tandoori-Roti.jpg" alt="Tandoori roti">
+    <h3>Tandoori roti</h3>
+       <p>Fresh from the Tandoor to your plate.</p> 
+      <p class="price">₹49</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://myspicetrunk.com/wp-content/uploads/2020/10/WhatsApp-Image-2020-10-12-at-1.17.39-PM.jpeg?v=1613928996" alt="Missi Roti">
+    <h3>Missi Roti</h3>
+      <p>A rustic delight,perfectly spiced.</p> 
+      <p class="price">₹59</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+<div class="food-item">
+    <img src="https://www.whiskaffair.com/wp-content/uploads/2019/12/Garlic-Naan-1-3.jpg" alt="Garlic Naan">
+    <h3>Garlic Naan</h3>
+     <p>Soft,Buttery and loaded with Garlic goodness.</p> 
+      <p class="price">₹79</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://i0.wp.com/binjalsvegkitchen.com/wp-content/uploads/2015/08/Pudina-Lachha-Paratha-H1.jpg?fit=600%2C900&ssl=1" alt="Lachha Parantha">
+    <h3>Lachha Parantha</h3>
+      <p>Laccha Parantha:A traditional favourite,Reinvented</p> 
+      <p class="price">₹89</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYgiCUjQEfOcJzebPudWKwXFeKfWA6YhJsKA&s" alt="Chocolate Shake">
+    <h3>Chocolate Shake</h3>
+      <p>A rich and creamy chocolate shake topped with whipped cream and drizzled with chocolate syrup</p>
+      <p class="price">₹199</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://www.oliviascuisine.com/wp-content/uploads/2021/06/strawberry-milkshake.jpg" alt="Strawberry Shake">
+    <h3>Strawberry Shake</h3>
+      <p>A rich and creamy strawberry shake topped with whipped cream and drizzled with strawberry syrup</p>
+      <p class="price">₹179</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA8lcNPGcFfWdMySZ3uaS7OoiSNdbtPOlsmw&s" alt="Mango Shake">
+    <h3>Mango Shake</h3>
+      <p>A rich and creamy mango shake topped with whipped cream and drizzled with mango syrup.</p>
+      <p class="price">₹189</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://www.cookwithmanali.com/wp-content/uploads/2022/07/Iced-Mocha.jpg" alt="coldcoffee">
+    <h3>Cold Coffee</h3>
+      <p>A rich and creamy cold coffee shake topped with whipped cream and drizzled with  syrup.</p>
+      <p class="price">₹199</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://palatesdesire.com/wp-content/uploads/2019/10/Chilli_chicken@palates_Desire-e1593266853471-scaled.jpg" alt="chiili chicken">
+    <h3>Chilli Chicken</h3>
+      <p>Boneless chicken pieces are marinated in soya sauce, chili sauce and black pepper.</p>
+      <p class="price">₹399</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://www.mysavoryadventures.com/wp-content/uploads/2023/04/restaurant-style-butter-chicken.jpg" alt="butter chicken">
+    <h3>Butter Chicken</h3>
+      <p>It is a type of curry made from chicken with a spiced tomato and butter (makhan) sauce.</p>
+      <p class="price">₹349</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://www.whiskaffair.com/wp-content/uploads/2019/02/Mutton-Rogan-Josh-2-3.jpg" alt="mutton rogan josh">
+    <h3>Mutton Rogan Josh</h3>
+      <p>Rogan josh consists of pieces of lamb or mutton braised with a gravy flavoured with garlic, ginger and aromatic spices (clove, bay leaves, cardamom, and cinnamon).</p>
+      <p class="price">₹449</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://www.tamingtwins.com/wp-content/uploads/2023/06/image-57.jpeg" alt="lotus biscoff cheesecake">
+    <h3>Lotus Biscoff Cheesecake</h3>
+      <p>A creamy cheesecake with an airy, mousse-like texture that screams Lotus in every bite!</p>
+      <p class="price">₹249</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://freshbeanbakery.com/wp-content/uploads/2023/05/Tiramisu-4.jpg" alt="tiramisu">
+    <h3>Tiramisu</h3>
+      <p>The creamy burrata and fluffy tiramisu are worth the half-hour wait.</p>
+      <p class="price">₹349</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://static.toiimg.com/photo/68358712.cms" alt="angoori rasmalai">
+    <h3>Angoori Rasmalai</h3>
+      <p> The dessert is made from cottage cheese which is then soaked in chashni, a sugary syrup, and rolled in fine sugar to form grape-sized balls.</p>
+      <p class="price">₹199</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://www.onceuponachef.com/images/2023/07/pina-coladas-1200x1600.jpg" alt="pina colada">
+    <h3>Pina Colada</h3>
+      <p>The perfect piña colada has a balance between pineapple juice and coconut cream.</p>
+      <p class="price">₹329</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLuJZ2FGfl0FZX964o3fKAJd4AiAYbcdaNkA&s" alt="virgin mojito">
+    <h3>Virgin Mojito</h3>
+      <p>Mojitos: the ultimate summer refreshment.</p>
+      <p class="price">₹299</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+
+  <div class="food-item">
+    <img src="https://saltandbaker.com/wp-content/uploads/2022/04/blueberry-mocktail-recipe-square.jpg" alt="blueberry mojito">
+    <h3>Blueberry Mojito</h3>
+      <p>A flavorful non-alcoholic drink, typically comprised of imaginative ingredients - shaken, stirred, or blended, just like their boozy counterparts.</p>
+      <p class="price">₹279</p>
+      <button class="order-btn">- 1 +</button>
+  </div>
+</div>
+
+  
+</div>
+<footer>
+  <div class="footer">
+      <div class="footer-content">
+          <h3>Contact Us</h3>
+          <p>Email:happybites@gmail.com</p>
+          <p>Phone:+91 98XXXXXXXX</p>
+          <p>Address:ABC Street , Chandigarh</p>
+      </div>
+      <div class="footer-content">
+          <h3>Quick Links</h3>
+           <ul class="list">
+              <li><a href="NEW HOME PAGE.html">Home</a></li>
+              <li><a href="NEW ABOUT US.html">About</a></li>
+              <li><a href="NEW CONTACT US.html">Contact Us</a></li>
+           </ul>
+      </div>
+      <div class="footer-content">
+          <h3>Follow Us</h3>
+          <ul class="social-icons">
+           <li><a href=""><i class="fab fa-facebook"></i></a></li>
+           <li><a href=""><i class="fab fa-twitter"></i></a></li>
+           <li><a href=""><i class="fab fa-instagram"></i></a></li>
+           <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+          </ul>
+          </div>
+  </div>
+  <div class="bottom-bar">
+      <p>&copy; 2024 Happy Bites . All rights reserved</p>
+  </div>
+</footer>
+</body>
+</html>
